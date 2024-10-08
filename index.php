@@ -27,5 +27,6 @@ require 'php/functions.php';
             require 'php/partials/character.php';
         } ?>
     </div>
+    <?php require 'php/partials/resetButton.php' ?>
 </body>
 </html> 

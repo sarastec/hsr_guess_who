@@ -65,3 +65,7 @@ function no(character) {
       buttonNo.classList.remove('current');
    }
 }
+
+function reset() {
+   
+}
