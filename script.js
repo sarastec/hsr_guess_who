@@ -3,6 +3,20 @@ let buttonYes;
 let buttonMaybe;
 let buttonNo;
 
+$(document).ready(function () {
+    $.get('partials/character-template.html', function (template) {
+        const container = $('.game-container');
+
+        characters.forEach(character => {
+            let characterHTML = template
+                .replace(/{{name}}/g, character.name)
+                .replace(/{{code}}/g, character.code);
+
+            container.append(characterHTML);
+        });
+    });
+});
+
 function yes(character) {
    charImg = document.getElementById(character);
    buttonYes = document.getElementById("yes-" + character);
